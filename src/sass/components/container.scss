@@ -1,0 +1,20 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 767px) {
+        padding: 0 20px;
+    }
+
+    @include screen('tablet') {
+        max-width: 690px;
+    }
+
+    @include screen('desktop') {
+        max-width: 1280px;
+    }
+
+    @include screen('desktop-xl') {
+        max-width: 1680px;
+    }
+}

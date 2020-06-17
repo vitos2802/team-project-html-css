@@ -1,0 +1,36 @@
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin font-source-sans($size: false, $weight: false, $lh: false) {
+    @if $size {
+      font-size: $size;
+    }
+    @if $weight {
+      font-weight: $weight;
+    }
+    @if $lh {
+      line-height: $lh;
+    }
+}
+
+@mixin screen($size) {
+    $desktop-xl: "(min-width: 1680px)"; // Переменная со значением desktop-xl размера
+    $desktop: "(min-width: 1280px)"; // Переменная со значением desktop размера
+    $tablet: "(min-width: 768px)"; // Переменная со значением tablet размера
+    @if $size == desktop-xl {
+      @media only screen and #{$desktop-xl} {
+        @content;
+        }
+    } @else if $size == desktop {
+        @media only screen and #{$desktop} {
+            @content;
+        }
+    } @else if $size == tablet {
+        @media only screen and #{$tablet} {
+          @content;
+        }
+    }
+}

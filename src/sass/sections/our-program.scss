@@ -1,8 +1,93 @@
 .our-program {
+  font-family: $main-font;
+  padding-top: 24px;
+  padding-bottom: 430px;
+  text-align: center;
   background-color: #111517;
+  background-image: url(../images/our-program-bg.png);
+  background-repeat: no-repeat;
+  background-position: right 80%;
+  @media (min-resolution: 192dpi) {
+    background-image: url(../images/our-program-bg@2x.png);
+  }
 }
 
 .section-title {
-  font-family: Montserrat, sans-serif;
+  letter-spacing: 0.05em;
   @include font-source-sans(20px, 800, 33px);
+  color: $text-accent-color;
+}
+
+.semester-list {
+  padding-top: 24px;
+  color: $text-accent-color;
+  text-transform: uppercase;
+  @include font-source-sans(14px, 700, 29.17px);
+  letter-spacing: 0.11em;
+  @include center-flex(ver);
+  flex-direction: column;
+  &__item {
+    max-width: 140px;
+  }
+  &__item_fix {
+    position: relative;
+    padding-left: 13px;
+  }
+  &__item_fix::before {
+    @include pseudo;
+    background-color: #546264;
+    width: 2px;
+    height: 1232px;
+    left: -9px;
+    top: -816px;
+  }
+  &__title {
+    text-align: left;
+    position: relative;
+  }
+  &__title::before {
+    @include pseudo;
+    border-radius: 50%;
+    background-color: rgb(255, 107, 8);
+    position: absolute;
+    left: -26px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    z-index: 10;
+  }
+}
+
+.discipline-list {
+  @include center-flex(hor);
+  flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  letter-spacing: normal;
+  @include font-source-sans(13px, 500, 29.17px);
+  color: $accent-color;
+  text-transform: capitalize;
+  margin: 0 auto;
+  &__item {
+    text-align: left;
+  }
+  &__title {
+    position: relative;
+    padding-left: 38px;
+  }
+  &__title::before {
+    @include pseudo;
+    width: 25px;
+    height: 2px;
+    background-color: $accent-color;
+    left: 0px;
+    top: 14px;
+  }
+}
+
+.themes-list {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  @include font-source-sans(11px, 400, 20px);
+  color: $secondary-bright-color;
 }

@@ -1,0 +1,38 @@
+.header {
+  padding: 26px 0 40px;
+}
+
+
+.logotype {
+  word-spacing: 22px;
+  @include font-source-sans (15px, 700, 1.2, 0.01em);
+  color: $primary-dark-color;
+  position: relative;
+
+ 
+
+  &__icon {
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    left: 31px;
+    width: 26px;
+    height: 28px;
+    background-image: url(../images/logotype__icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+
+  &__description {
+
+    @include font-source-sans (5.3px, 700, 1.2, 0.01px);
+  }
+
+
+
+
+}
+
+
+

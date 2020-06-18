@@ -4,7 +4,7 @@
   position: $pos;
 }
 
-@mixin font-source-sans($size: false, $weight: false, $lh: false) {
+@mixin font-source-sans($size: false, $weight: false, $lh: false, $ls: false) {
   @if $size {
     font-size: $size;
   }
@@ -13,6 +13,9 @@
   }
   @if $lh {
     line-height: $lh;
+  }
+  @if $ls {
+    letter-spacing: $ls;
   }
 }
 

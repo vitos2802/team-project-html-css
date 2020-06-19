@@ -1,43 +1,48 @@
 .our-program {
-  font-family: $main-font;
   padding-top: 24px;
   padding-bottom: 430px;
   text-align: center;
   background-color: #111517;
-  background-image: url(../images/our-program-bg.png);
+  background-image: url(../images/section-our-program/mob-bg.png);
   background-repeat: no-repeat;
   background-position: right 80%;
   @media (min-resolution: 192dpi) {
-    background-image: url(../images/our-program-bg@2x.png);
+    background-image: url(../images/section-our-program/mob-bg@2x.png);
+  }
+  @include screen('tablet') {
+    padding-top: 70px;
+    text-align: left;
+    background-position: right 70%;
+    background-image: url(../images/section-our-program/tablet-bg.png);
+    @media (min-resolution: 192dpi) {
+      background-image: url(../images/section-our-program/tablet-bg@2x.png);
+    }
   }
 }
 
 .section-title {
-  letter-spacing: 0.05em;
-  @include font-source-sans(20px, 800, 33px);
+  line-height: 33px;
   color: $text-accent-color;
 }
 
 .semester-list {
+  position: relative;
   padding-top: 24px;
   color: $text-accent-color;
   text-transform: uppercase;
-  @include center-flex(ver);
-  flex-direction: column;
-  &__item {
-    max-width: 140px;
-  }
-  &__item_fix {
-    position: relative;
-    padding-left: 13px;
-  }
-  &__item_fix::before {
+  &::before {
     @include pseudo;
     background-color: #546264;
     width: 2px;
-    height: 1232px;
-    left: -9px;
-    top: -816px;
+    height: 1214px;
+    left: 12px;
+    top: 36px;
+    @include screen('tablet') {
+      left: 92px;
+      height: 706px;
+    }
+  }
+  &__item {
   }
   &__title {
     @include font-source-sans(15px, 700, 29.17px);
@@ -50,11 +55,25 @@
     border-radius: 50%;
     background-color: rgb(255, 107, 8);
     position: absolute;
-    left: -26px;
-    top: 8px;
+    left: -36px;
+    top: 10px;
     width: 10px;
     height: 10px;
     z-index: 10;
+    @include screen('tablet') {
+      left: -56px;
+    }
+  }
+  @include screen('mobile') {
+    width: 180px;
+    margin: 0 auto;
+    padding-left: 44px;
+  }
+  @include screen('tablet') {
+    @include center-flex(ver);
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 144px;
   }
 }
 
@@ -68,7 +87,13 @@
   color: $accent-color;
   text-transform: capitalize;
   &__item {
+    width: 178px;
     text-align: left;
+  }
+  &__item:not(:last-child) {
+    @include screen('tablet') {
+      // margin-right: 60px;
+    }
   }
   &__title {
     position: relative;
@@ -82,6 +107,10 @@
     left: 0px;
     top: 14px;
   }
+  @include screen('tablet') {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .themes-list {
@@ -89,4 +118,9 @@
   padding-bottom: 6px;
   @include font-source-sans(11px, 400, 20px);
   color: $secondary-bright-color;
+}
+
+//HELPERS
+.block-fix {
+  display: block;
 }

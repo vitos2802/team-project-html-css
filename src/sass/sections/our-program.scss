@@ -42,12 +42,12 @@
     @include pseudo;
     background-color: #546264;
     width: 2px;
-    height: 1214px;
+    height: 1250px;
     left: 12px;
     top: 36px;
     @include screen('tablet') {
       left: 92px;
-      height: 706px;
+      height: 718px;
     }
   }
   &__item:not(:last-child) {
@@ -140,12 +140,18 @@
 .themes-list {
   padding-top: 10px;
   padding-bottom: 6px;
-  @include font-source-sans(11px, 400, 20px, 0.05);
+  @include font-source-sans(11px, 400, 20px, 0.05em);
   color: $secondary-bright-color;
+  opacity: 0.5;
   @include screen('desktop') {
     font-size: 18.75px;
     padding-top: 10px;
     padding-bottom: 34px;
+  }
+  &__item {
+    @include screen('desktop') {
+      line-height: 29.17px;
+    }
   }
 }
 

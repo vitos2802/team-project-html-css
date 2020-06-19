@@ -18,6 +18,14 @@
       background-image: url(../images/section-our-program/tablet-bg@2x.png);
     }
   }
+  @include screen('desktop') {
+    padding-top: 80px;
+    background-position: left 70%;
+    background-image: url(../images/section-our-program/desktop-bg.png);
+    @media (min-resolution: 192dpi) {
+      background-image: url(../images/section-our-program/desktop-bg@2x.png);
+    }
+  }
 }
 
 .section-title {
@@ -42,13 +50,18 @@
       height: 706px;
     }
   }
-  &__item {
+  &__item:not(:last-child) {
+    @include screen('desktop') {
+      width: 204px;
+    }
   }
   &__title {
-    @include font-source-sans(15px, 700, 29.17px);
-    letter-spacing: 0.11em;
+    @include font-source-sans(15px, 700, 29.17px, 0.11em);
     text-align: left;
     position: relative;
+    @include screen('desktop') {
+      font-size: 19px;
+    }
   }
   &__title::before {
     @include pseudo;
@@ -73,7 +86,15 @@
     @include center-flex(ver);
     flex-direction: column;
     align-items: flex-start;
+  }
+  @media (min-width: 768px) and (max-width: 1279px) {
     padding-left: 144px;
+  }
+  @include screen('desktop') {
+    padding-top: 98px;
+    padding-right: 10px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -82,22 +103,21 @@
   flex-direction: column;
   padding-top: 10px;
   padding-bottom: 20px;
-  letter-spacing: normal;
-  @include font-source-sans(13px, 500, 29.17px);
+  @include font-source-sans(13px, 500, 29.17px, 0.05em);
   color: $accent-color;
   text-transform: capitalize;
   &__item {
-    width: 178px;
     text-align: left;
-  }
-  &__item:not(:last-child) {
-    @include screen('tablet') {
-      // margin-right: 60px;
+    @media (max-width: 1279px) {
+      width: 178px;
     }
   }
   &__title {
     position: relative;
     padding-left: 38px;
+    @include screen('desktop') {
+      font-size: 18px;
+    }
   }
   &__title::before {
     @include pseudo;
@@ -111,13 +131,22 @@
     flex-direction: row;
     justify-content: space-between;
   }
+  @include screen('desktop') {
+    flex-direction: column;
+    padding-top: 36px;
+  }
 }
 
 .themes-list {
-  padding-top: 6px;
+  padding-top: 10px;
   padding-bottom: 6px;
-  @include font-source-sans(11px, 400, 20px);
+  @include font-source-sans(11px, 400, 20px, 0.05);
   color: $secondary-bright-color;
+  @include screen('desktop') {
+    font-size: 18.75px;
+    padding-top: 10px;
+    padding-bottom: 34px;
+  }
 }
 
 //HELPERS

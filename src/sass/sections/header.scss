@@ -1,19 +1,125 @@
 .header {
   padding: 26px 0 40px;
+
+
+  background-image: url(../images/main__picture.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 192dpi) {
+    background-image: url(../images/main__picture@2x.jpg);
+  }
+
+
+
+  &__title {
+    @include font-source-sans(20px, 800, 1.2, 0.03em);
+    color: $primary-dark-color;
+    margin-bottom: 40px;
+
+    &-span {
+      display: block;
+    }
+  }
+
+  &__description {
+    margin-bottom: 39px;
+
+    &-item {
+      @include font-source-sans(15px, 500, 1.2, 0.05);
+
+      &:nth-child(1) {
+        color: $primary-bright-color;
+
+      }
+
+      &:nth-child(2) {
+        color: $primary-dark-color;
+
+      }
+
+      &:nth-child(3) {
+        color: $accent-color;
+      }
+    }
+  }
+
+  &__additional {
+
+    &-icon-student {
+      background-image: url(../images/header_icons/1Female_Student.svg);
+    }
+
+    &-icon-mobile {
+      background-image: url(../images/header_icons/2Mobile_Learning.svg);
+    }
+
+    &-icon-umbrella {
+      background-image: url(../images/header_icons/3insurance.svg);
+    }
+
+    &-item {
+      position: relative;
+      background-repeat: no-repeat;
+      background-position: left 60px top 14px;
+      
+
+      &-description {
+        @include font-source-sans(13px, 700, 1.2, 0.05em) position: absolute;
+        top: 5px;
+        left: 119px;
+      }
+
+      &-span {
+        display: block;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 58px;
+        height: 58px;
+        border: solid 2px $accent-color;
+        margin-left: 49px;
+
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        height: 38px;
+        border: solid 1px $text-accent-color;
+        position: absolute;
+        top: 9px;
+        left: 105px;
+      }
+    }
+  }
 }
 
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+
+}
 
 .logotype {
-  word-spacing: 22px;
-  @include font-source-sans (25px, 700, 1.2, 0.01em);
+  word-spacing: 14px;
+  @include font-source-sans (15px, 800, 1.2, 0.03em);
   color: $primary-dark-color;
   position: relative;
 
   &__icon {
     display: inline-block;
     position: absolute;
-    top: -3px;
-    left: 54px;
+    top: -9px;
+    left: 29px;
     width: 26px;
     height: 30px;
     background-image: url(../images/logotype__icon.svg);
@@ -23,12 +129,58 @@
   }
 
   &__description {
-    margin-top: 8px;
     text-transform: uppercase;
-    @include font-source-sans (8.75px, 700, 1.2, 0.11em);
+    @include font-source-sans (5.3px, 700, 1.2, 0.13em);
 
     &-span {
       color: $accent-color;
     }
   }
+}
+
+.burger {
+  &__item {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: $primary-dark-color;
+
+    &:not(:last-child) {
+      margin-bottom: 3px;
+    }
+  }
+}
+
+.button {
+  @include font-source-sans(11px, 700, 1.2, 0.13em);
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-accent-color;
+  display: block;
+  background-color: $accent-color;
+  width: 250px;
+  height: 48px;
+  cursor: pointer;
+
+  transition: all 0.2s linear;
+
+  &:focus,
+  &:hover {
+    background-color: #fe5900;
+  }
+
+  &__header {
+    margin: 0 auto 307px;
+  }
+}
+
+
+.Rectangle_9 {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 116px;
+  top: 681px;
+  width: 68px;
+  height: 36px;
+  z-index: 63;
 }

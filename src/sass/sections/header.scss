@@ -27,8 +27,19 @@
     color: $primary-dark-color;
     margin-bottom: 40px;
 
-    &-span {
+    @include screen ('tablet') {
+
+      @include font-source-sans(26px, 800, 1.2, 0.03em);
+    }
+
+    &-span1 {
       display: block;
+    }
+
+    &-span2 {
+      @include screen ('tablet') {
+        display: block;
+      }
     }
   }
 
@@ -36,16 +47,14 @@
     margin-bottom: 39px;
 
     &-item {
-      @include font-source-sans(15px, 500, 1.2, 0.05);
+      @include font-source-sans(15px, 500, 1.2, 0.05em);
 
       &:nth-child(1) {
         color: $primary-bright-color;
-
       }
 
       &:nth-child(2) {
         color: $primary-dark-color;
-
       }
 
       &:nth-child(3) {
@@ -97,8 +106,6 @@
           margin-bottom: 25px;
         }
       }
-
-
 
       &-square {
         display: flex;
@@ -162,22 +169,39 @@
   color: $primary-dark-color;
   position: relative;
 
+  @include screen ('tablet') {
+    word-spacing: 20px;
+    @include font-source-sans (25px, 800, 1.2, 0.03em);
+  }
+
   &__icon {
     display: inline-block;
     position: absolute;
-    top: -9px;
-    left: 29px;
-    width: 26px;
-    height: 30px;
+    top: -4px;
+    left: 35px;
+    width: 15px;
+    height: 22px;
     background-image: url(../images/logotype__icon.svg);
     background-repeat: no-repeat;
     background-position: center;
+
+    @include screen ('tablet') {
+      top: -4px;
+      left: 59px;
+      width: 21px;
+      height: 30px;
+    }
 
   }
 
   &__description {
     text-transform: uppercase;
     @include font-source-sans (5.3px, 700, 1.2, 0.13em);
+
+    @include screen ('tablet') {
+      @include font-source-sans (8.75px, 700, 1.2, 0.13em);
+    }
+
 
     &-span {
       color: $accent-color;

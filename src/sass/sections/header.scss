@@ -207,6 +207,22 @@
       color: $accent-color;
     }
   }
+
+  .button {
+    @include font-source-sans(11px, 700, 1.2, 0.13em);
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    width: 250px;
+    height: 48px;
+    cursor: pointer;
+
+    &__navigation {
+      color: $text-accent-color;
+      background-color: $accent-color;
+
+    }
+  }
 }
 
 .burger {
@@ -226,14 +242,16 @@
   @include font-source-sans(11px, 700, 1.2, 0.13em);
   text-transform: uppercase;
   text-align: center;
-  color: $text-accent-color;
   display: block;
-  background-color: $accent-color;
   width: 250px;
   height: 48px;
   cursor: pointer;
 
-  transition: all 0.2s linear;
+  &__header {
+    color: $text-accent-color;
+    background-color: $accent-color;
+    transition: all 0.2s linear;
+  }
 
   &:focus,
   &:hover {

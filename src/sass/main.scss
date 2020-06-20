@@ -2,11 +2,17 @@
 @import './helpers/fonts';
 @import './helpers/variables';
 @import './helpers/mixins';
+@import './helpers/visually-hidden';
 @import 'base.scss';
 
 @import './components/container.scss';
 @import './components/section-title';
+@import './components/card-counter.scss';
 
+<<<<<<< HEAD
 @import './sections/header';
 @import './sections/student-problems';
+=======
+@import './sections/student-problems.scss';
+>>>>>>> dev
 @import './sections/our-program.scss';

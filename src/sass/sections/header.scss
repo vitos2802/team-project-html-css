@@ -58,7 +58,6 @@
 
     @include screen ('tablet') {
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
     }
 
@@ -81,11 +80,25 @@
     }
 
     &-item {
-      position: relative;
+      display: flex;
+      align-items: center;
+
+      &-description {
+        margin-left: 12px;
+        @include font-source-sans(13px, 700, 1.2, 0.05em);
+
+        &-span {
+          display: block;
+        }
+      }
 
       &:not(:last-child) {
-        margin-bottom: 25px;
+        @include screen ('mobile') {
+          margin-bottom: 25px;
+        }
       }
+
+
 
       &-square {
         display: flex;
@@ -113,49 +126,22 @@
           position: absolute;
         }
 
-        &::before {
+        &::after {
           content: "";
           display: block;
           width: 2px;
           height: 11px;
           background-color: $accent-color;
-          top: 9px;
-          left: 100px;
+          top: 45px;
+          left: 54px;
           position: absolute;
         }
       }
 
-      &-description {
-        @include font-source-sans(13px, 700, 1.2, 0.05em);
-        position: absolute;
-        z-index: 1;
-        top: 5px;
-        left: 119px;
-
-        @include screen ('tablet') {
-          left: 69px;
-        }
-      }
-
-      // &::after {
-      //   content: "";
-      //   display: block;
-      //   height: 38px;
-      //   border: solid 3px $text-accent-color;
-      //   position: absolute;
-      //   top: 9px;
-      //   left: 105px;
-
       @include screen ('tablet') {
-        left: 56px;
+        left: 0;
       }
     }
-
-    &-span {
-      display: block;
-    }
-
-
   }
 }
 
@@ -175,8 +161,6 @@
   @include font-source-sans (15px, 800, 1.2, 0.03em);
   color: $primary-dark-color;
   position: relative;
-
-
 
   &__icon {
     display: inline-block;
@@ -230,9 +214,5 @@
   &:focus,
   &:hover {
     background-color: #fe5900;
-  }
-
-  &__header {
-    // margin: 0 auto 307px;
   }
 }

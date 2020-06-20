@@ -19,11 +19,21 @@
     }
   }
   @include screen('desktop') {
+    padding-bottom: 474px;
     padding-top: 76px;
-    background-position: left 70%;
+    background-position: left 64%;
     background-image: url(../images/section-our-program/desktop-bg.png);
     @media (min-resolution: 192dpi) {
       background-image: url(../images/section-our-program/desktop-bg@2x.png);
+    }
+  }
+  @include screen('desktop-xl') {
+    padding-top: 128px;
+    padding-bottom: 358px;
+    background-position: left 84%;
+    background-image: url(../images/section-our-program/desktop-xl-bg.png);
+    @media (min-resolution: 192dpi) {
+      background-image: url(../images/section-our-program/desktop-xl-bg@2x.png);
     }
   }
 }
@@ -173,7 +183,7 @@
   }
   @include screen('desktop') {
     flex-direction: column;
-    padding-top: 36px;
+    padding-top: 38px;
   }
 }
 

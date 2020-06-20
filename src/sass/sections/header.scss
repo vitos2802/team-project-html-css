@@ -18,9 +18,23 @@
     background-image: url(../images/main__picture@2x.jpg);
   }
 
-  @include screen('tablet') {
+  @include screen ('tablet') {
     background-image: url(../images/main__picture_tablet.jpg);
+
+    @media (min-resolution: 192dpi) {
+      background-image: url(../images/main__picture_tablet@2x.jpg);
+    }
   }
+
+  @include screen ('desktop') {
+    background-image: url(../images/main__picture_desktop.jpg);
+
+    @media (min-resolution: 192dpi) {
+      background-image: url(../images/main__picture_desktop@2x.jpg);
+    }
+  }
+
+
 
   &__title {
     @include font-source-sans(20px, 800, 1.2, 0.03em);
@@ -63,16 +77,7 @@
     }
   }
 
-  &__button {
-    color: $text-accent-color;
-    background-color: transparent;
-    transition: all 0.2s linear;
-  }
 
-  &:focus,
-  &:hover {
-    background-color: #fe5900;
-  }
 
 
   &__additional {
@@ -174,15 +179,10 @@
     margin-bottom: 88px;
   }
 
-  &__button {
-    color: $text-accent-color;
-    background-color: $accent-color;
-    transition: all 0.2s linear;
-  }
+  &__menu {
+    display: flex;
+    align-items: center;
 
-  &:focus,
-  &:hover {
-    background-color: #fe5900;
   }
 }
 
@@ -243,6 +243,10 @@
       margin-bottom: 3px;
     }
   }
+
+  @include screen ('desktop') {
+    display: none;
+  }
 }
 
 .button {
@@ -253,4 +257,30 @@
   width: 250px;
   height: 48px;
   cursor: pointer;
+
+  &__navigation {
+    color: $accent-color;
+    background-color: $text-accent-color;
+    border: 2px solid $accent-color;
+
+    margin-right: 45px;
+
+    @include screen ('mobile') {
+      display: none;
+    }
+  }
+
+  &__header {
+    color: $text-accent-color;
+    background-color: $accent-color;
+    transition: all 0.2s linear;
+
+    &:focus,
+    &:hover {
+      background-color: #fe5900;
+    }
+  }
+
+
+
 }

@@ -149,6 +149,7 @@
 
         &-span1 {
           display: block;
+
           @include screen ('desktop') {
             display: inline;
           }
@@ -243,6 +244,37 @@
       display: flex;
       align-items: center;
 
+      &-list {
+        
+
+        @include screen ('mobile') {
+          display: none;
+        }
+
+        @include screen ('tablet') {
+          display: none;
+        }
+
+        @include screen ('desktop') {
+          display: flex;
+        }
+
+        &-item {
+          margin-right: 47px;
+        }
+
+        &-link {
+          @include font-source-sans(12px, 700, 1.2, 0.1em);
+          color: $primary-bright-color;
+          text-transform: uppercase;
+
+          transition: all 0.2s linear;
+
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
     }
   }
 
@@ -345,6 +377,8 @@
       color: $text-accent-color;
       background-color: $accent-color;
       transition: all 0.2s linear;
+
+      @include font-source-sans(12px, 700, 1.2, 0.1em);
 
       &:focus,
       &:hover {

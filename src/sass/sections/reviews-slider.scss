@@ -42,4 +42,7 @@
   padding: 22px 0px 54px 0px;
 }
 
+.slider-wrapper__img:not(:last-child) {
+  margin-right: 10px;
+}
 // background-image: url(../images/reviews-slider/icons/vk.svg);

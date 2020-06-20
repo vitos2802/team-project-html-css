@@ -1,0 +1,45 @@
+.reviews-slider {
+  padding-top: 48px;
+}
+
+.section-title {
+  text-align: center;
+  line-height: 26.54px;
+  padding-bottom: 20px;
+}
+
+.slider-card {
+  text-align: center;
+  padding: 22px 28px 30px 28px;
+  box-shadow: 4px 6.928px 34.96px 11.04px #1d1d1b17;
+  &__img {
+    margin: 0px auto 20px auto;
+  }
+  &__social {
+    margin: 0px auto 18px auto;
+  }
+  &__title {
+    @include font-source-sans(13px, 800, 29.17px, 0.05em);
+    color: $accent-color;
+  }
+  &__description {
+    @include font-source-sans(11px, 500, 16.67px, 0.05em);
+    color: $secondary-bright-color;
+    padding-bottom: 18px;
+  }
+  &__text {
+    @include font-source-sans(11px, 500, 20px, 0.05em);
+    color: $primary-dark-color;
+  }
+  &__link {
+    color: $accent-color;
+    text-decoration: underline;
+  }
+}
+
+.slider-wrapper {
+  @include center-flex(hor);
+  padding: 22px 0px 54px 0px;
+}
+
+// background-image: url(../images/reviews-slider/icons/vk.svg);

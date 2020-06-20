@@ -19,7 +19,7 @@
     }
   }
   @include screen('desktop') {
-    padding-top: 80px;
+    padding-top: 76px;
     background-position: left 70%;
     background-image: url(../images/section-our-program/desktop-bg.png);
     @media (min-resolution: 192dpi) {
@@ -31,11 +31,14 @@
 .section-title {
   line-height: 33px;
   color: $text-accent-color;
+  @include screen('desktop') {
+    line-height: 62.54px;
+  }
 }
 
 .semester-list {
   position: relative;
-  padding-top: 24px;
+  padding-top: 30px;
   color: $text-accent-color;
   text-transform: uppercase;
   &::before {
@@ -44,10 +47,21 @@
     width: 2px;
     height: 1250px;
     left: 12px;
-    top: 36px;
+    top: 44px;
     @include screen('tablet') {
       left: 92px;
+      top: 52px;
       height: 718px;
+    }
+    @include screen('desktop') {
+      width: 10000px;
+      height: 2px;
+      left: -3000px;
+      top: 38px;
+    }
+    @include screen('desktop-xl') {
+      height: 4px;
+      top: 88px;
     }
   }
   &__item:not(:last-child) {
@@ -62,8 +76,11 @@
     @include screen('desktop') {
       font-size: 19px;
     }
+    @include screen('desktop') {
+      font-size: 20.83px;
+    }
   }
-  &__title::before {
+  &__title::after {
     @include pseudo;
     border-radius: 50%;
     background-color: rgb(255, 107, 8);
@@ -76,6 +93,17 @@
     @include screen('tablet') {
       left: -56px;
     }
+    @include screen('desktop') {
+      left: 0px;
+      top: -54px;
+      width: 17px;
+      height: 17px;
+    }
+    @include screen('desktop-xl') {
+      top: -78px;
+      width: 20px;
+      height: 20px;
+    }
   }
   @include screen('mobile') {
     width: 180px;
@@ -83,6 +111,7 @@
     padding-left: 44px;
   }
   @include screen('tablet') {
+    padding-top: 38px;
     @include center-flex(ver);
     flex-direction: column;
     align-items: flex-start;
@@ -91,10 +120,18 @@
     padding-left: 144px;
   }
   @include screen('desktop') {
-    padding-top: 98px;
+    padding-top: 84px;
     padding-right: 10px;
     flex-direction: row;
     justify-content: space-between;
+  }
+  @include screen('desktop-xl') {
+    padding-top: 158px;
+  }
+  &__title::first-letter {
+    @include screen('desktop-xl') {
+      font-size: 29.17px;
+    }
   }
 }
 
@@ -103,7 +140,6 @@
   flex-direction: column;
   padding-top: 10px;
   padding-bottom: 20px;
-  @include font-source-sans(13px, 500, 29.17px, 0.05em);
   color: $accent-color;
   text-transform: capitalize;
   &__item {
@@ -113,10 +149,14 @@
     }
   }
   &__title {
+    @include font-source-sans(13px, 500, 29.17px, 0.05em);
     position: relative;
     padding-left: 38px;
     @include screen('desktop') {
       font-size: 18px;
+    }
+    @include screen('desktop-xl') {
+      font-size: 20.83px;
     }
   }
   &__title::before {
@@ -140,17 +180,17 @@
 .themes-list {
   padding-top: 10px;
   padding-bottom: 6px;
-  @include font-source-sans(11px, 400, 20px, 0.05em);
   color: $secondary-bright-color;
   opacity: 0.5;
   @include screen('desktop') {
-    font-size: 18.75px;
     padding-top: 10px;
     padding-bottom: 34px;
   }
-  &__item {
+  &__text {
+    @include font-source-sans(11px, 400, 20px, 0.05em);
     @include screen('desktop') {
       line-height: 29.17px;
+      font-size: 18.75px;
     }
   }
 }

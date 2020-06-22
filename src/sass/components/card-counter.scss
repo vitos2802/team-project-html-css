@@ -70,20 +70,35 @@
         background-color: $accent-color;
     }
 
+
+
     @include screen('mobile') {
+        &:nth-child(3) {
+            width: 222px;
+        }
+
         &:not(:last-child) {
             margin-bottom: 22px;
         }
     }
 
     @include screen('tablet-to-desktop') {
+        &:first-child {
+            width: 177px;
+        }
+
+        &:nth-child(3) {
+            width: 222px;
+        }
+
+
         &:not(:nth-last-child(-n + 2)) {
             margin-bottom: 30px;
         }
     }
 
     @include screen('desktop') {
-        width: 290px;
+        width: 308px;
         padding-top: 30px;
 
         &:not(:nth-last-child(-n + 3)) {

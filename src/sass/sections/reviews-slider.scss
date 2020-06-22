@@ -8,13 +8,13 @@
     padding-top: 90px;
     padding-bottom: 100px;
   }
-  @include screen('desktop-чд') {
+  @include screen('desktop-xl') {
     padding-top: 128px;
     padding-bottom: 100px;
   }
 }
 
-.section-title {
+.section-title_reviews-slider {
   text-align: center;
   line-height: 26.54px;
   padding-bottom: 20px;
@@ -29,20 +29,31 @@
     padding-bottom: 44px;
   }
 }
+
 .slider-card {
   text-align: center;
   padding: 22px 28px 30px 28px;
   margin-bottom: 22px;
   box-shadow: 4px 6.928px 34.96px 11.04px #1d1d1b17;
-  &__img-wrapper {
-    @include screen('tablet') {
-      padding-top: 26px;
-      margin-right: 44px;
-    }
-    @include screen('desktop') {
-      padding-top: 12px;
-      margin-right: 34px;
-    }
+  @include screen('tablet') {
+    padding-top: 42px;
+    @include center-flex(hor);
+    padding-bottom: 46px;
+  }
+  @include screen('desktop') {
+    max-width: 1064px;
+    margin: 0px auto 38px auto;
+  }
+}
+
+.slider-image-wrapper {
+  @include screen('tablet') {
+    padding-top: 26px;
+    margin-right: 44px;
+  }
+  @include screen('desktop') {
+    padding-top: 12px;
+    margin-right: 34px;
   }
   &__img {
     margin: 0px auto 20px auto;
@@ -52,6 +63,16 @@
     @include screen('mobile') {
       margin-bottom: 18px;
     }
+  }
+}
+
+.slider-text-wrapper {
+  @include screen('tablet') {
+    width: 470px;
+    text-align: left;
+  }
+  @include screen('desktop') {
+    width: 708px;
   }
   &__title {
     @include font-source-sans(13px, 800, 29.17px, 0.05em);
@@ -74,15 +95,6 @@
       font-size: 12.5px;
     }
   }
-  &__text-wrapper {
-    @include screen('tablet') {
-      width: 470px;
-      text-align: left;
-    }
-    @include screen('desktop') {
-      width: 708px;
-    }
-  }
   &__text {
     @include font-source-sans(11px, 500, 20px, 0.05em);
     color: $primary-dark-color;
@@ -100,23 +112,14 @@
     color: $accent-color;
     text-decoration: underline;
   }
-  @include screen('tablet') {
-    padding-top: 42px;
-    @include center-flex(hor);
-    padding-bottom: 46px;
-  }
-  @include screen('desktop') {
-    max-width: 1064px;
-    margin: 0px auto 38px auto;
-  }
 }
 
-.slider-wrapper {
+.bottom-slider-wrapper {
   position: relative;
   @include center-flex(hor);
 }
 
-.slider-wrapper__img {
+.bottom-slider-wrapper__img {
   display: none;
   border-radius: 50%;
   border: 2px solid transparent;
@@ -133,9 +136,6 @@
       margin-right: 36px;
     }
   }
-  &:hover {
-    border-color: $accent-color;
-  }
   &:nth-child(-n + 3) {
     @include screen('mobile') {
       display: block;
@@ -144,11 +144,9 @@
   @include screen('tablet') {
     display: block;
   }
-}
-
-.slider-buttons {
-  position: absolute;
-  // transform: translate(-50%, -38%);
+  &:hover {
+    border-color: $accent-color;
+  }
 }
 
 .slider-button {
@@ -171,7 +169,7 @@
   }
 }
 
-.button-left {
+.slider-button_left {
   background-image: url(../images/reviews-slider/icons/left-arrow.svg);
   right: 100%;
   transform: translate(100%, -50%);
@@ -186,7 +184,7 @@
   }
 }
 
-.button-right {
+.slider-button_right {
   left: 100%;
   background-image: url(../images/reviews-slider/icons/right-arrow.svg);
   transform: translate(-100%, -50%);

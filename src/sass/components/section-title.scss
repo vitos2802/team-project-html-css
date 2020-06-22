@@ -1,17 +1,17 @@
 .section-title {
-    font-family: $main-font;
-    @include font-source-sans(20px, 800, 30px, 0.05em);
-    color: $secondary-dark-color;
+  font-family: $main-font;
+  @include font-source-sans(20px, 800, 30px, 0.05em);
+  color: $secondary-dark-color;
 
-    @include screen('tablet') {
-        @include font-source-sans(26px, 800, 62px, 0.05em);
-    }
+  @include screen('tablet') {
+    @include font-source-sans(26px, 800, 62px, 0.05em);
+  }
 
-    @include screen('desktop') {
-        @include font-source-sans(42px, 800, 62px, 0.05em);
-    }
+  @include screen('desktop') {
+    @include font-source-sans(42px, 800, 62px, 0.05em);
+  }
 
-    @include screen('desktop-xl') {
-        @include font-source-sans(45.9px, 800, 62px, 0.05em);
-    }
+  @include screen('desktop-xl') {
+    @include font-source-sans(45.9px, 800, 62px, 0.05em);
+  }
 }

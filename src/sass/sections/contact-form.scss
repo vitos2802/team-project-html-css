@@ -103,13 +103,15 @@
 .contact-form__input::placeholder {
     color: $text-accent-color;
 }
-// .contact-form__input:required:valid {
-//     outline: 2px solid green;
-// }
-// .contact-form__input:required:focus:invalid:not(:placeholder-shown) {
-//     outline: 2px solid red;
-// }  
+    @include screen('desktop') {
 
+.contact-form__input:required:valid {
+    outline: 2px solid green;
+}
+.contact-form__input:required:focus:invalid:not(:placeholder-shown) {
+    outline: 2px solid red;
+} 
+}
 .contact-form__input:not(:last-child){
     margin-bottom: 20px;
 

@@ -38,7 +38,7 @@
   }
 }
 
-.section-title {
+.section-title_our-program {
   line-height: 33px;
   color: $text-accent-color;
   @include screen('desktop') {
@@ -51,6 +51,29 @@
   padding-top: 30px;
   color: $text-accent-color;
   text-transform: uppercase;
+  @include screen('mobile') {
+    width: 180px;
+    margin: 0 auto;
+    padding-left: 44px;
+  }
+  @include screen('tablet') {
+    padding-top: 38px;
+    @include center-flex(ver);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  @media (min-width: 768px) and (max-width: 1279px) {
+    padding-left: 144px;
+  }
+  @include screen('desktop') {
+    padding-top: 84px;
+    padding-right: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include screen('desktop-xl') {
+    padding-top: 158px;
+  }
   &::before {
     @include pseudo;
     background-color: #546264;
@@ -115,29 +138,6 @@
       height: 20px;
     }
   }
-  @include screen('mobile') {
-    width: 180px;
-    margin: 0 auto;
-    padding-left: 44px;
-  }
-  @include screen('tablet') {
-    padding-top: 38px;
-    @include center-flex(ver);
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  @media (min-width: 768px) and (max-width: 1279px) {
-    padding-left: 144px;
-  }
-  @include screen('desktop') {
-    padding-top: 84px;
-    padding-right: 10px;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  @include screen('desktop-xl') {
-    padding-top: 158px;
-  }
   &__title::first-letter {
     @include screen('desktop-xl') {
       font-size: 29.17px;
@@ -152,6 +152,14 @@
   padding-bottom: 20px;
   color: $accent-color;
   text-transform: capitalize;
+  @include screen('tablet') {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include screen('desktop') {
+    flex-direction: column;
+    padding-top: 38px;
+  }
   &__item {
     text-align: left;
     @media (max-width: 1279px) {
@@ -176,14 +184,6 @@
     background-color: $accent-color;
     left: 0px;
     top: 14px;
-  }
-  @include screen('tablet') {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  @include screen('desktop') {
-    flex-direction: column;
-    padding-top: 38px;
   }
 }
 

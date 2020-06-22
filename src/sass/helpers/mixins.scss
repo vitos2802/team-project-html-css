@@ -1,4 +1,4 @@
-@mixin pseudo($display: block, $pos: absolute, $content: '') {
+@mixin pseudo($display: block, $pos: absolute, $content: ' ') {
   content: $content;
   display: $display;
   position: $pos;
@@ -24,6 +24,8 @@
   $desktop: '(min-width: 1280px)'; // Переменная со значением desktop размера
   $tablet: '(min-width: 768px)'; // Переменная со значением tablet размера
   $mobile: '(max-width: 767px)'; // Переменная со значением mobile размера
+  $tablet-to-desktop: '(min-width: 768px) and (max-width: 1279px)';
+
   @if $size == desktop-xl {
     @media only screen and #{$desktop-xl} {
       @content;
@@ -38,6 +40,10 @@
     }
   } @else if $size == mobile {
     @media only screen and #{$mobile} {
+      @content;
+    }
+  } @else if $size == tablet-to-desktop {
+    @media only screen and #{$tablet-to-desktop} {
       @content;
     }
   }

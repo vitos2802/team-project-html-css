@@ -1,20 +1,17 @@
 .container {
-    width: 100%;
-    margin: 0 auto;
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto;
 
-    @include screen('mobile') {
-        padding: 0 20px;
-    }
+  @include screen('tablet') {
+    max-width: 690px;
+  }
 
-    @include screen('tablet') {
-        max-width: 690px;
-    }
+  @include screen('desktop') {
+    max-width: 1210px;
+  }
 
-    @include screen('desktop') {
-        max-width: 1210px;
-    }
-
-    @include screen('desktop-xl') {
-        max-width: 1680px;
-    }
+  @include screen('desktop-xl') {
+    max-width: 1340px;
+  }
 }

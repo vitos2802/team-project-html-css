@@ -41,61 +41,76 @@
 }
 
 .card-counter__item {
-  position: relative;
-  padding-top: 20px;
-  width: 238px;
+    position: relative;
+    padding-top: 20px;
+    width: 238px;
 
-  &::before {
-    content: "0"counter(counter);
-    counter-increment: counter;
-    display: block;
-    color: $accent-color;
-    position: absolute;
-    left: 34px;
-    top: 0;
-    transform: translateY(-45%);
-    @include font-source-sans(14px, 500, 29px, 0.05em);
+    &::before {
+        content:"0" counter(counter);
+        counter-increment: counter;
+        display: block;
+        color: $accent-color;
+        position: absolute;
+        left: 34px;
+        top: 0;
+        transform: translateY(-45%);
+        @include font-source-sans(14px, 500, 29px, 0.05em);
+
+        @include screen('desktop') {
+            @include font-source-sans($size: 20.9px);
+        }
+    }
+
+    &::after {
+        @include pseudo;
+        top: 0;
+        left: 0;
+        width: 25px;
+        height: 2px;
+        background-color: $accent-color;
+    }
+
+
+
+    @include screen('mobile') {
+        &:nth-child(3) {
+            width: 222px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 22px;
+        }
+    }
+
+    @include screen('tablet-to-desktop') {
+        &:first-child {
+            width: 177px;
+        }
+
+        &:nth-child(3) {
+            width: 225px;
+        }
+
+
+        &:not(:nth-last-child(-n + 2)) {
+            margin-bottom: 30px;
+        }
+    }
 
     @include screen('desktop') {
-      @include font-source-sans($size: 20.9px);
+        width: 308px;
+        padding-top: 30px;
+
+        &:not(:nth-last-child(-n + 3)) {
+            margin-bottom: 45px;
+        }
     }
-  }
 
-  &::after {
-    @include pseudo;
-    top: 0;
-    left: 0;
-    width: 25px;
-    height: 2px;
-    background-color: $accent-color;
-  }
+    @include screen('desktop-xl') {
+        width: 335px;
 
-  @include screen('mobile') {
-    &:not(:last-child) {
-      margin-bottom: 22px;
+        &:not(:nth-last-child(-n + 3)) {
+            margin-bottom: 50px;
+        }
     }
-  }
-
-  @include screen('tablet-to-desktop') {
-    &:not(:nth-last-child(-n + 2)) {
-      margin-bottom: 30px;
-    }
-  }
-
-  @include screen('desktop') {
-    width: 290px;
-    padding-top: 30px;
-
-    &:not(:nth-last-child(-n + 3)) {
-      margin-bottom: 45px;
-    }
-  }
-
-  @include screen('desktop-xl') {
-    width: 335px;
-
-    &:not(:nth-last-child(-n + 3)) {
-      margin-bottom: 50px;
-    }
-  }
 }

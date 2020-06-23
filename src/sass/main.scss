@@ -5,6 +5,7 @@
 @import './helpers/visually-hidden';
 @import 'base.scss';
 
+@import './components/wrapper.scss';
 @import './components/container.scss';
 @import './components/logotype';
 @import './components/button';
@@ -12,6 +13,8 @@
 @import './components/card-counter.scss';
 
 @import './sections/header';
-@import './sections/student-problems';
+@import './sections/student-problems.scss';
+
 @import './sections/our-program.scss';
+@import './sections/why-choose-us.scss';
 @import './sections/teacher.scss';

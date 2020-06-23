@@ -6,32 +6,39 @@
   background-image: url(../images/section-our-program/mob-bg.png);
   background-repeat: no-repeat;
   background-position: right 80%;
+
   @media (min-resolution: 192dpi) {
     background-image: url(../images/section-our-program/mob-bg@2x.png);
   }
+
   @include screen('tablet') {
     padding-top: 70px;
     text-align: left;
     background-position: right 70%;
     background-image: url(../images/section-our-program/tablet-bg.png);
+
     @media (min-resolution: 192dpi) {
       background-image: url(../images/section-our-program/tablet-bg@2x.png);
     }
   }
+
   @include screen('desktop') {
     padding-bottom: 474px;
     padding-top: 76px;
     background-position: left 64%;
     background-image: url(../images/section-our-program/desktop-bg.png);
+
     @media (min-resolution: 192dpi) {
       background-image: url(../images/section-our-program/desktop-bg@2x.png);
     }
   }
+
   @include screen('desktop-xl') {
     padding-top: 128px;
     padding-bottom: 358px;
     background-position: left 84%;
     background-image: url(../images/section-our-program/desktop-xl-bg.png);
+
     @media (min-resolution: 192dpi) {
       background-image: url(../images/section-our-program/desktop-xl-bg@2x.png);
     }
@@ -41,6 +48,7 @@
 .section-title_our-program {
   line-height: 33px;
   color: $text-accent-color;
+
   @include screen('desktop') {
     line-height: 62.54px;
   }
@@ -51,29 +59,35 @@
   padding-top: 30px;
   color: $text-accent-color;
   text-transform: uppercase;
+
   @include screen('mobile') {
     width: 180px;
     margin: 0 auto;
     padding-left: 44px;
   }
+
   @include screen('tablet') {
     padding-top: 38px;
     @include center-flex(ver);
     flex-direction: column;
     align-items: flex-start;
   }
+
   @media (min-width: 768px) and (max-width: 1279px) {
     padding-left: 144px;
   }
+
   @include screen('desktop') {
     padding-top: 84px;
     padding-right: 10px;
     flex-direction: row;
     justify-content: space-between;
   }
+
   @include screen('desktop-xl') {
     padding-top: 158px;
   }
+
   &::before {
     @include pseudo;
     background-color: #546264;
@@ -81,38 +95,46 @@
     height: 1250px;
     left: 12px;
     top: 44px;
+
     @include screen('tablet') {
       left: 92px;
       top: 52px;
       height: 718px;
     }
+
     @include screen('desktop') {
       width: 10000px;
       height: 2px;
       left: -3000px;
       top: 38px;
     }
+
     @include screen('desktop-xl') {
       height: 4px;
       top: 88px;
     }
   }
+
   &__item:not(:last-child) {
     @include screen('desktop') {
       width: 204px;
     }
   }
+
   &__title {
     @include font-source-sans(15px, 700, 29.17px, 0.11em);
     text-align: left;
     position: relative;
+
     @include screen('desktop') {
       font-size: 19px;
     }
+
     @include screen('desktop') {
       font-size: 20.83px;
     }
   }
+
   &__title::after {
     @include pseudo;
     border-radius: 50%;
@@ -123,21 +145,25 @@
     width: 10px;
     height: 10px;
     z-index: 10;
+
     @include screen('tablet') {
       left: -56px;
     }
+
     @include screen('desktop') {
       left: 0px;
       top: -54px;
       width: 17px;
       height: 17px;
     }
+
     @include screen('desktop-xl') {
       top: -78px;
       width: 20px;
       height: 20px;
     }
   }
+
   &__title::first-letter {
     @include screen('desktop-xl') {
       font-size: 29.17px;
@@ -152,31 +178,39 @@
   padding-bottom: 20px;
   color: $accent-color;
   text-transform: capitalize;
+
   @include screen('tablet') {
     flex-direction: row;
     justify-content: space-between;
   }
+
   @include screen('desktop') {
     flex-direction: column;
     padding-top: 38px;
   }
+
   &__item {
     text-align: left;
+
     @media (max-width: 1279px) {
       width: 178px;
     }
   }
+
   &__title {
     @include font-source-sans(13px, 500, 29.17px, 0.05em);
     position: relative;
     padding-left: 38px;
+
     @include screen('desktop') {
       font-size: 18px;
     }
+
     @include screen('desktop-xl') {
       font-size: 20.83px;
     }
   }
+
   &__title::before {
     @include pseudo;
     width: 25px;
@@ -192,12 +226,15 @@
   padding-bottom: 6px;
   color: $secondary-bright-color;
   opacity: 0.5;
+
   @include screen('desktop') {
     padding-top: 10px;
     padding-bottom: 34px;
   }
+
   &__text {
     @include font-source-sans(11px, 400, 20px, 0.05em);
+
     @include screen('desktop') {
       line-height: 29.17px;
       font-size: 18.75px;

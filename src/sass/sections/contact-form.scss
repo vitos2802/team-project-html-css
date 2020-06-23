@@ -1,0 +1,139 @@
+.contact-form {
+    background-image: url('../images/contact/mob.png');
+    background-repeat: no-repeat;
+    padding: 60px 10px;
+
+    @include screen('tablet') {
+        background-image: url('../images/contact/tablet.png');
+    }
+    @include screen('desktop'){
+    background-image: url('../images/contact/desk1280.png');
+}
+    @include screen('desktop-xl') {
+    background-image: url('../images/contact/desk1680.png');
+}
+&__discription {
+    @include screen('tablet'){
+        width: 550px;
+        margin: 0 auto;
+}
+    @include screen('desktop'){
+        width: 932px;
+}
+}
+&__title-text {
+    @include font-source-sans(12px, 800, 26.04px, 0.05rem);
+    color: $text-accent-color;
+    text-align: center;
+    margin-bottom: 30px;
+
+
+    @include screen('tablet') {
+    @include font-source-sans(22px, 800, 38px, 0.05rem);  
+}
+    @include screen('desktop'){
+    @include font-source-sans(37.5px, 800, 50.04px, 0.05rem);  
+}
+}
+&__request {
+    @include font-source-sans(11px, 600, 20px, 0.05rem);
+    text-align: center;   
+    color: $text-accent-color;
+    margin-bottom: 30px;
+
+    @include screen('tablet') {
+    @include font-source-sans(16px, 800, 20px, 0.05rem);
+}
+@include screen('desktop') {
+    @include font-source-sans(18px, 800, 24.5px, 0.05rem);
+    width: 560px;
+    margin: 0 auto;
+    margin-bottom: 56px;
+}
+@include screen('desktop-xl'){
+    @include font-source-sans(25px, 800, 37.5px, 0.05rem);
+    width: 758px;
+}
+}
+}
+.accent-text {
+   color: $accent-color;
+}
+
+.contact-form__block {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+
+    @include screen('tablet'){
+    margin-bottom: 30px;
+}
+
+    @include screen('desktop'){
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 56px;
+}
+}
+.contact-form__input {
+    &::placeholder {
+        color: $text-accent-color;
+    }  
+    &:not(:last-child){
+        margin-bottom: 20px;
+    }
+    width: 280px;
+    height: 50px;
+    color: $text-accent-color;
+    @include font-source-sans(13px, 600, 37.5px, 0.05rem);
+    padding-left: 20px;
+    background: none;
+    border: 1px solid;
+
+    @include screen('tablet') {
+    width: 400px; 
+}
+     @include screen('desktop') {
+    width: 620px;
+    height: 70px;
+    margin: 0 auto;
+    @include font-source-sans(20.83px, 600, 37.5px, 0.05rem);
+   
+    &:required:valid {
+        outline: 2px solid green;
+    }
+    &:required:focus:invalid:not(:placeholder-shown) {
+        outline: 2px solid red;
+    } 
+}
+&__input{
+    @include screen('desktop') {
+    margin-bottom: 28px;
+}
+}
+}
+.contact-form__btn-wrapper {
+    text-align: center;
+}
+.contact-form__send {
+    &:hover{
+    color: $accent-color;
+    background-color: $text-accent-color;
+    transition: 0.4s;
+    box-shadow: 2px 1px 2px 1px $accent-color;
+    }
+    width: 250px;
+    text-transform: uppercase;
+    @include font-source-sans(12px, 600, 0px, 0.0130rem);
+    padding: 20px 14px;
+    background-color: $accent-color;
+    cursor: pointer;
+    color: $text-accent-color;
+
+    @include screen('desktop') {
+    width:350px;
+    @include font-source-sans(16px, 600, 0px, 0.0130rem);
+    padding: 30px 20px;
+} 
+}

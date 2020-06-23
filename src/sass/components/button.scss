@@ -1,0 +1,11 @@
+.button {
+  @include font-source-sans(11px, 700, 1.2, 0.13em);
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  width: 250px;
+  height: 48px;
+  cursor: pointer;
+  color: $text-accent-color;
+  background-color: $accent-color;
+}

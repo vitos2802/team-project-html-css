@@ -82,6 +82,8 @@
     background-color: $text-accent-color;
     border: 2px solid $accent-color;
 
+    transition: all 0.2s linear;
+
 
     @include screen ('desktop') {
       width: 302px;

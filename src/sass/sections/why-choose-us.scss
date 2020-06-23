@@ -1,0 +1,31 @@
+.why-choose-us {
+    width: 100%;
+    position: absolute;
+    top: -35%;
+
+    @include screen('desktop') {
+        top: -50%;
+    }
+
+    @include screen('desktop-xl') {
+        top: -30%;
+    }
+}
+
+.why-choose-us__section-title {
+    color: $text-accent-color;
+    margin-bottom: 26px;
+
+    @include screen('mobile') {
+        max-width: 144px;
+    }
+
+    @include screen('tablet') {
+        text-align: center;
+        margin-bottom: 26px;
+    }
+
+    @include screen('desktop') {
+        margin-bottom: 40px;
+    }
+}

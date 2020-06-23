@@ -94,16 +94,8 @@
       border-right: 1px dotted #bababa;
       top: 10px;
       left: -25px;
-      height: 85px;
+      height: 140%;
       position: absolute;
-
-      @include screen ('tablet') {
-        height: 75px;
-      }
-
-      @include screen ('desktop') {
-        height: 95px;
-      }
     }
   }
 }

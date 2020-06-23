@@ -1,11 +1,19 @@
 .why-choose-us {
     width: 100%;
     position: absolute;
-    display: none;
+    top: -35%;
+
+    @include screen('desktop') {
+        top: -50%;
+    }
+
+    @include screen('desktop-xl') {
+        top: -30%;
+    }
 }
 
 .why-choose-us__section-title {
-    // color: $text-accent-color;
+    color: $text-accent-color;
     margin-bottom: 26px;
 
     @include screen('mobile') {

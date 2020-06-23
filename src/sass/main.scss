@@ -5,10 +5,17 @@
 @import './helpers/visually-hidden';
 @import 'base.scss';
 
+@import './components/wrapper.scss';
 @import './components/container.scss';
+@import './components/logotype';
+@import './components/button';
 @import './components/section-title';
 @import './components/card-counter.scss';
 
+@import './sections/header';
 @import './sections/student-problems.scss';
+@import './sections/system-education.scss';
 @import './sections/our-program.scss';
 @import './sections/contact-form.scss';
+@import './sections/why-choose-us.scss';
+@import './sections/teacher.scss';

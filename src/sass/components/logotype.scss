@@ -1,17 +1,16 @@
 .logotype {
-
-  @include font-source-sans (15px, 800, 1.2, 0.03em);
+  @include font-source-sans(15px, 800, 1.2, 0.03em);
   color: $primary-dark-color;
   position: relative;
 
-  @include screen ('tablet') {
-    @include font-source-sans (25px, 800, 1.2, 0.03em);
+  @include screen('tablet') {
+    @include font-source-sans(25px, 800, 1.2, 0.03em);
   }
 
   &__span {
     margin-right: 14px;
 
-    @include screen ('tablet') {
+    @include screen('tablet') {
       margin-right: 20px;
     }
   }
@@ -27,7 +26,7 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    @include screen ('tablet') {
+    @include screen('tablet') {
       top: -4px;
       left: 59px;
       width: 21px;
@@ -38,10 +37,10 @@
   &__description {
     margin-top: 3px;
     text-transform: uppercase;
-    @include font-source-sans (5.3px, 700, 1.2, 0.13em);
+    @include font-source-sans(5.3px, 700, 1.2, 0.13em);
 
-    @include screen ('tablet') {
-      @include font-source-sans (8.75px, 700, 1.2, 0.13em);
+    @include screen('tablet') {
+      @include font-source-sans(8.75px, 700, 1.2, 0.13em);
     }
 
     &-span {

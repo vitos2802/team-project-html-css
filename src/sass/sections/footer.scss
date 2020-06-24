@@ -4,15 +4,13 @@
 
 .footer-contacts {
   position: relative;
-  display: flex;
   @include screen('mobile') {
     padding-top: 28px;
     padding-bottom: 14px;
     text-align: center;
-    flex-direction: column;
-    align-content: center;
   }
   @include screen('tablet') {
+    display: flex;
     padding: 40px 0px 40px 0px;
     flex-direction: row;
     justify-content: center;
@@ -20,18 +18,9 @@
 }
 
 .footer__logotype {
-  @include screen('mobile') {
-    align-self: center;
-  }
   @include screen('tablet') {
     position: absolute;
     left: 0px;
-  }
-}
-
-.footer__logotype .logotype__icon {
-  @include screen('mobile') {
-    left: 36px;
   }
 }
 

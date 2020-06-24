@@ -8,4 +8,10 @@
   cursor: pointer;
   color: $text-accent-color;
   background-color: $accent-color;
+
+  @include screen('desktop') {
+    width: 350px;
+    height: 68px;
+    @include font-source-sans(16px, 700, 1.2, 0.13em);
+  }
 }

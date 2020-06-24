@@ -1,0 +1,376 @@
+.hero {
+    padding-bottom: 80px;
+  
+    @include screen ('tablet') {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 130px;
+    }
+  
+    @include screen ('desktop') {
+      padding-bottom: 217px;
+    }
+  
+    &__title {
+      @include font-source-sans(20px, 800, 1.2, 0.03em);
+      color: $primary-dark-color;
+      margin-bottom: 40px;
+  
+      @include screen ('tablet') {
+        margin-bottom: 36px;
+  
+        @include font-source-sans(26px, 800, 1.2, 0.03em);
+      }
+  
+      @include screen ('desktop') {
+        margin-bottom: 48px;
+  
+        @include font-source-sans(48px, 800, 1.2, 0.03em);
+      }
+  
+      &-span1 {
+        display: block;
+      }
+  
+      &-span2 {
+        @include screen ('tablet') {
+          display: block;
+        }
+      }
+    }
+  
+    &__description {
+      margin-bottom: 39px;
+  
+      @include screen ('desktop') {
+        margin-bottom: 70px;
+      }
+  
+      &-item {
+        @include font-source-sans(15px, 600, 1.2, 0.05em);
+  
+        &:nth-child(1) {
+          color: $primary-bright-color;
+        }
+  
+        &:nth-child(2) {
+          @include screen ('desktop') {
+            display: inline-block;
+          }
+  
+          color: $primary-dark-color;
+        }
+  
+        &:nth-child(3) {
+          @include screen ('desktop') {
+            display: inline-block;
+          }
+  
+          color: $accent-color;
+        }
+      }
+    }
+  
+    &__button {
+      transition: all 0.2s linear;
+  
+      @include screen('mobile') {
+        margin: 0 auto;
+      }
+  
+      &:hover {
+        background-color: #ff2f00;
+      }
+    }
+  }
+
+.hero__wrap-content {
+    margin-bottom: 87px;
+  
+    @include screen('tablet') {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 128px;
+    }
+  }
+  
+  .hero__content {
+    @include screen('mobile') {
+      margin-bottom: 35px;
+    }
+  }
+  
+  .hero__img {
+    @include screen('mobile') {
+      margin: 0 auto;
+    }
+  }
+  
+  .burger {
+    background-color: transparent;
+    position: relative;
+  
+    @include screen ('desktop') {
+      display: none;
+    }
+  }
+  
+  .submenu {
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s linear;
+    position: fixed;
+    background-color: rgba(24, 25, 29, 0.9);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 116px;
+    z-index: 1;
+  
+    @include screen ('tablet') {
+      width: 100%;
+      height: 100%;
+    }
+  
+    &-item {
+      text-align: center;
+  
+      &:nth-child(-n + 4) {
+        margin-bottom: 25px;
+      }
+  
+      &:nth-child(5) {
+        margin-bottom: 56px;
+      }
+  
+      &-button {
+        width: 250px;
+        height: 48px;
+        margin: 0 auto;
+        border: 2px solid $accent-color;
+        cursor: pointer;
+        padding-top: 10px;
+  
+        transition: all 0.2s linear;
+  
+        &-link {
+          color: $accent-color;
+  
+        }
+  
+        &:hover {
+          border: 2px solid $text-accent-color;
+        }
+  
+        @include screen ('tablet') {
+          display: none;
+        }
+  
+      }
+  
+  
+      &-link {
+        color: $text-accent-color;
+        transition: all 0.1s linear;
+  
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+  
+  .burger {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+  
+    @include screen ('desktop') {
+      display: none;
+    }
+  }
+  
+  .burger__line {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $primary-dark-color;
+    transition: .3s linear;
+  
+    &::before {
+      @include pseudo;
+      width: 100%;
+      height: 2px;
+      background-color: $primary-dark-color;
+      top: 5px;
+    }
+  
+    &::after {
+      @include pseudo;
+      width: 100%;
+      height: 2px;
+      background-color: $primary-dark-color;
+      bottom: 5px;
+    }
+  }
+  
+  .open-close {
+    .burger__line {
+      transform: rotate(45deg);
+      z-index: 2;
+      background-color: $text-accent-color;
+    }
+  
+    .burger__line::before {
+      top: 0;
+      transform: rotate(0);
+      background-color: $text-accent-color;
+    }
+  
+    .burger__line::after {
+      bottom: 0;
+      transform: rotate(90deg);
+      background-color: $text-accent-color;
+    }
+  }
+  
+  .show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .visible {
+    z-index: 2;
+    color: $text-accent-color;
+  }
+  
+
+.hero__additional {
+  @include screen ('tablet') {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-icon-wrapper {
+    width: 34px;
+    height: 34px;
+    background-repeat: no-repeat;
+
+    @include screen ('desktop') {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  &-icon-student {
+    background-image: url(../images/header_icons/1Female_Student.svg);
+  }
+
+  &-icon-mobile {
+    background-image: url(../images/header_icons/2Mobile_Learning.svg);
+  }
+
+  &-icon-umbrella {
+    background-image: url(../images/header_icons/3insurance.svg);
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+
+    &-description {
+      margin-left: 12px;
+      @include font-source-sans(13px, 700, 1.2, 0.05em);
+
+      @include screen ('desktop') {
+        margin-left: -17px;
+        @include font-source-sans(18px, 700, 1.4, 0.05em);
+      }
+
+      &-span1 {
+        display: block;
+
+        @include screen ('desktop') {
+          display: inline;
+        }
+      }
+
+      &-span2 {
+        @include screen ('desktop') {
+          display: block;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      @include screen ('mobile') {
+        margin-bottom: 25px;
+      }
+    }
+
+    &-square {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 58px;
+      height: 58px;
+      border: solid 2px $accent-color;
+      border-right: none;
+      margin-left: 49px;
+      position: relative;
+
+      @include screen ('tablet') {
+        margin-left: 0;
+      }
+
+      @include screen ('desktop') {
+        width: 103px;
+        height: 103px;
+
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 11px;
+        background-color: $accent-color;
+        top: -2px;
+        left: 54px;
+        position: absolute;
+
+        @include screen ('desktop') {
+          height: 17px;
+          top: -2px;
+          left: 100px;
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 11px;
+        background-color: $accent-color;
+        top: 45px;
+        left: 54px;
+        position: absolute;
+
+        @include screen ('desktop') {
+          height: 17px;
+          top: 84px;
+          left: 100px;
+        }
+      }
+    }
+
+    @include screen ('tablet') {
+      left: 0;
+    }
+  }
+}

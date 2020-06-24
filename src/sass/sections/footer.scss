@@ -24,7 +24,6 @@
     align-self: center;
   }
   @include screen('tablet') {
-    order: -1;
     position: absolute;
     left: 0px;
   }

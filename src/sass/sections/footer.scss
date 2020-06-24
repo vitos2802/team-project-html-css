@@ -3,6 +3,7 @@
 }
 
 .footer-contacts {
+  position: relative;
   display: flex;
   @include screen('mobile') {
     padding-top: 28px;
@@ -14,6 +15,7 @@
   @include screen('tablet') {
     padding: 40px 0px 40px 0px;
     flex-direction: row;
+    justify-content: center;
   }
 }
 
@@ -23,13 +25,8 @@
   }
   @include screen('tablet') {
     order: -1;
-    margin-right: 90px;
-  }
-  @include screen('desktop') {
-    margin-right: 280px;
-  }
-  @include screen('desktop-xl') {
-    margin-right: 350px;
+    position: absolute;
+    left: 0px;
   }
 }
 
@@ -59,7 +56,6 @@
   @include screen('tablet') {
     padding-right: 30px;
     border-right: 1px solid #e0e0e0;
-    // height: 29px;
     font-size: 20px;
   }
   @include screen('desktop') {

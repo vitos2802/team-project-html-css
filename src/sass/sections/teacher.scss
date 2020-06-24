@@ -1,0 +1,189 @@
+.teacher {
+    padding: 244px 0 24px 0;
+
+    @include screen('tablet') {
+        padding: 230px 0 28px 0;
+    }
+
+    @include screen('desktop') {
+        padding: 94px 0 44px 0;
+    }
+
+    @include screen('desktop-xl') {
+        padding: 316px 0 134px 0;
+    }
+}
+
+.teacher__title {
+    margin-bottom: 23px;
+
+    @include screen('tablet') {
+        margin-bottom: 30px;
+    }
+
+    @include screen('desctop') {
+        margin-bottom: 50px;
+    }
+}
+
+.teacher__wrapper {
+    @include screen('tablet') {
+        display: flex;
+    }
+}
+
+.teacher__img {
+    @include screen('mobile') {
+        margin-bottom: 20px;
+    }
+
+    @include screen('tablet') {
+        margin-right: 45px;
+    }
+
+    @include screen('desktop') {
+        margin-right: 85px;
+    }
+}
+
+.teacher__content {
+    @include screen('tablet') {
+        width: 396px;
+    }
+    
+    @include screen('desktop') {
+        width: 610px;
+    }
+}
+
+.teacher__name {
+    @include font-source-sans(16px, 800, 29px, 0.05em);
+    color: $secondary-dark-color;
+    margin-bottom: 20px;
+
+    &::after {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 1px;
+        opacity: 0.38;
+        background-color: $secondary-bright-color;
+
+        @include screen('tablet') {
+            margin-top: 16px;
+        }
+    }
+
+    @include screen('tablet') {
+        @include font-source-sans($size: 20px);
+    }
+
+    @include screen('desktop') {
+        @include font-source-sans($size: 29.2px);
+    }
+}
+
+.teacher__skills-list {
+    margin-bottom: 16px;
+
+    @include screen('desktop') {
+        margin-bottom: 26px;
+    }
+}
+
+.teacher__skills-item {
+    position: relative;
+    @include font-source-sans(13px, 800, 20px, 0.05em);
+    color: $secondary-dark-color;
+    padding-left: 30px;
+    max-width: 280px;
+
+    &::before {
+        @include pseudo;
+        width: 16px;
+        height: 12px;
+        left: 0;
+        top: 0;
+        background-image: url(../images/teacher/icons/check.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include screen('desktop') {
+            width: 26px;
+            height: 22px;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 26px;
+
+        @include screen('desktop-xl') {
+            margin-bottom: 20px;
+        }
+    }
+
+    @include screen('tablet') {
+        max-width: 367px;
+    }
+
+    @include screen('desktop') {
+        @include font-source-sans($size: 16.7px, $lh: 29px);
+        max-width: 532px;
+        padding-left: 44px;
+    }
+}
+
+.teacher__description {
+    @include screen('mobile') {
+        max-width: 259px;
+        margin: 0 auto;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: $accent-color;
+        margin-bottom: 16px;
+
+        @include screen('desktop') {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.teacher__description-text {
+    @include font-source-sans(11px, 400, 20px, 0.05em);
+    color: $secondary-bright-color;
+    margin-bottom: 12px;
+
+    @include screen('mobile') {
+        &:nth-child(-n + 2) {
+            max-width: 242px;
+        }
+    }
+
+    @include screen('tablet') {
+        margin-bottom: 16px;
+    }
+
+    @include screen('desktop') {
+        @include font-source-sans($size: 16.7px, $lh: 29px);
+        margin-bottom: 22px;
+    }
+
+    @include screen('desktop-xl') {
+        margin-bottom: 18px;
+    }
+}
+
+.teacher__link {
+    @include font-source-sans(11px, 400, 29px, 0.05em);
+    color: $accent-color;
+    text-decoration: underline;
+
+    @include screen('desktop') {
+        @include font-source-sans($size: 16.7px);
+    }
+}

@@ -12,8 +12,8 @@
     align-content: center;
   }
   @include screen('tablet') {
+    padding: 40px 0px 40px 0px;
     flex-direction: row;
-    justify-content: space-between;
   }
 }
 
@@ -23,6 +23,13 @@
   }
   @include screen('tablet') {
     order: -1;
+    margin-right: 90px;
+  }
+  @include screen('desktop') {
+    margin-right: 280px;
+  }
+  @include screen('desktop-xl') {
+    margin-right: 350px;
   }
 }
 
@@ -32,27 +39,50 @@
   }
 }
 
-.footer-contacts__tel {
-  font-style: normal;
-  @include font-source-sans(18px, 600, 37.5px, 0.05em);
-  color: $secondary-dark-color;
-}
-
 .footer-contacts__address {
   @include screen('mobile') {
     margin-bottom: 20px;
   }
   @include screen('tablet') {
-    margin-left: auto;
+    @include center-flex(all);
   }
 }
 
-.footer-contacts__insta {
+.footer-contacts__tel {
+  font-style: normal;
+  @include font-source-sans(18px, 600, 37.5px, 0.05em);
+  color: $secondary-dark-color;
+  @include center-flex(all);
   @include screen('mobile') {
     margin-bottom: 20px;
   }
   @include screen('tablet') {
-    padding-right: 20px;
+    padding-right: 30px;
+    border-right: 1px solid #e0e0e0;
+    // height: 29px;
+    font-size: 20px;
+  }
+  @include screen('desktop') {
+    font-size: 27.08px;
+  }
+  &::before {
+    content: '';
+    display: block;
+    background-image: url(../images/footer/tel.svg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    width: 26px;
+    height: 26px;
+    margin-right: 6px;
+    @include screen('desktop') {
+      margin-right: 12px;
+    }
+  }
+}
+
+.footer-contacts__insta {
+  @include screen('tablet') {
+    padding-left: 30px;
   }
 }
 

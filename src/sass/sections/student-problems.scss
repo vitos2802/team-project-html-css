@@ -1,92 +1,90 @@
-
-
 .student-problems {
-    background-color: $secondary-dark-color;
-    padding: 50px 0 325px 0;
+  background-color: $secondary-dark-color;
+  padding: 50px 0 325px 0;
 
-    @include screen('tablet') {
-        padding: 60px 0 176px 0;
-        background-image: url(../images/student-problems/fire-768.png);
-        background-repeat: no-repeat;
-        background-position: bottom -15px right;
-        background-size: 210px 313px;
+  @include screen('tablet') {
+    padding: 60px 0 176px 0;
+    background-image: url(../images/student-problems/fire-768.png);
+    background-repeat: no-repeat;
+    background-position: bottom -15px right;
+    background-size: 210px 313px;
 
-        @media (min-resolution: 192dpi) {
-            background-image: url(../images/student-problems/fire-768@2x.png);
-        }
+    @media (min-resolution: 192dpi) {
+      background-image: url(../images/student-problems/fire-768@2x.png);
     }
+  }
 
-    @include screen('desktop') {
-        padding: 72px 0 292px 0;
-        background-image: url(../images/student-problems/fire-1280.png);
-        background-size: 356px 534px;
-        background-position: bottom -30px right;
+  @include screen('desktop') {
+    padding: 72px 0 292px 0;
+    background-image: url(../images/student-problems/fire-1280.png);
+    background-size: 356px 534px;
+    background-position: bottom -30px right;
 
-        @media (min-resolution: 192dpi) {
-            background-image: url(../images/student-problems/fire-1280@2x.png);
-        }
+    @media (min-resolution: 192dpi) {
+      background-image: url(../images/student-problems/fire-1280@2x.png);
     }
+  }
 
-    @include screen('desktop-xl') {
-        padding: 110px 0 270px 0;
-        background-image: url(../images/student-problems/fire-1680.png);
-        background-size: 392px 584px;
-        background-position: bottom -115px right -15px;
+  @include screen('desktop-xl') {
+    padding: 110px 0 270px 0;
+    background-image: url(../images/student-problems/fire-1680.png);
+    background-size: 392px 584px;
+    background-position: bottom -115px right -15px;
 
-        @media (min-resolution: 192dpi) {
-            background-image: url(../images/student-problems/fire-1680@2x.png);
-        }
+    @media (min-resolution: 192dpi) {
+      background-image: url(../images/student-problems/fire-1680@2x.png);
     }
+  }
 
 }
 
 .student-problems__wrapper {
-    position: relative;
+  position: relative;
 }
 
 .student-problems__section-title {
-    max-width: 240px;
-    color: $text-accent-color;
+  max-width: 240px;
+  color: $text-accent-color;
 
-    @include screen('tablet') {
-        max-width: 465px;
-        @include font-source-sans($lh: 33px);
-    }
+  @include screen('tablet') {
+    max-width: 465px;
+    @include font-source-sans($lh: 33px);
+  }
 
-    @include screen('desktop') {
-        max-width: 752px;
-        @include font-source-sans($lh: 56px);
-    }
+  @include screen('desktop') {
+    max-width: 752px;
+    @include font-source-sans($lh: 56px);
+  }
 
-    @include screen('desktop-xl') {
-        max-width: 822px;
-        @include font-source-sans($lh: 62px);
-    }
+  @include screen('desktop-xl') {
+    max-width: 822px;
+    @include font-source-sans($lh: 62px);
+  }
 }
 
 .student-problems__section-title-decore {
-    color: $accent-color;
+  color: $accent-color;
 }
 
 .student-problems__section-title-box-br {
-    @include screen('mobile') {
-        display: block;
-    }
+  @include screen('mobile') {
+    display: block;
+  }
 }
 
 .student-problems__section-title-box-br2 {
-    @include screen('tablet') {
-        display: block;
-    }
+  @include screen('tablet') {
+    display: block;
+  }
 }
 
 .student-problems__card-counter {
-    position: absolute;
-    width: 100%;
-    top: 110%;
-    left: 0;
+  position: absolute;
+  width: 100%;
+  top: 110%;
+  left: 0;
 
-    @include screen('tablet') {
-        top: 120%;
-    }
+  @include screen('tablet') {
+    top: 120%;
+  }
 }

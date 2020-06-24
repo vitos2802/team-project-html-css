@@ -1,4 +1,5 @@
 .our-program {
+  position: relative;
   padding-top: 24px;
   padding-bottom: 430px;
   text-align: center;
@@ -8,6 +9,7 @@
   background-position: right 80%;
 
   @media (min-resolution: 192dpi) {
+    background-size: 143px 183px;
     background-image: url(../images/section-our-program/mob-bg@2x.png);
   }
 
@@ -18,6 +20,7 @@
     background-image: url(../images/section-our-program/tablet-bg.png);
 
     @media (min-resolution: 192dpi) {
+      background-size: 406px 300px;
       background-image: url(../images/section-our-program/tablet-bg@2x.png);
     }
   }
@@ -29,6 +32,7 @@
     background-image: url(../images/section-our-program/desktop-bg.png);
 
     @media (min-resolution: 192dpi) {
+      background-size: 546px 420px;
       background-image: url(../images/section-our-program/desktop-bg@2x.png);
     }
   }
@@ -40,7 +44,21 @@
     background-image: url(../images/section-our-program/desktop-xl-bg.png);
 
     @media (min-resolution: 192dpi) {
+      background-size: 700px 517px;
       background-image: url(../images/section-our-program/desktop-xl-bg@2x.png);
+    }
+  }
+  &::before {
+    @include screen('desktop') {
+      @include pseudo;
+      background-color: #546264;
+      top: 176px;
+      width: 100vw;
+      height: 2px;
+    }
+    @include screen('desktop-xl') {
+      top: 278px;
+      height: 4px;
     }
   }
 }
@@ -103,15 +121,7 @@
     }
 
     @include screen('desktop') {
-      width: 10000px;
-      height: 2px;
-      left: -3000px;
-      top: 38px;
-    }
-
-    @include screen('desktop-xl') {
-      height: 4px;
-      top: 88px;
+      display: none;
     }
   }
 

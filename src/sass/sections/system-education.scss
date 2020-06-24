@@ -1,0 +1,142 @@
+.system-education {
+  margin: 0 auto;
+  background-color: #f7f7f7;
+
+  &__title-text {
+    @include font-source-sans(20px, 800, 33px, 0.05rem);
+    color: $primary-dark-color;
+    padding-bottom: 40px;
+    text-align: center;
+    padding-top: 50px;
+
+      @include screen('tablet') {
+      @include font-source-sans(26px, 800, 33px, 0.05rem);
+    }
+
+    @include screen('desktop') {
+      @include font-source-sans(42px, 800, 62px, 0.05rem);
+      text-align: left;
+    }
+    
+    @include screen('desktop-xl') {
+      width: 1340px;
+      margin: 0 auto;
+      padding-bottom: 60px;
+      @include font-source-sans(46px, 800, 62px, 0.05rem);
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    @include screen('tablet') {
+    justify-content: space-between;
+    width: 602px;
+  }
+    @include screen('desktop') {
+    width: 1210px;
+  }
+    @include screen('desktop-xl'){
+    width: 1340px;
+  }
+  }
+  &__list-item {
+    width: 280px;
+    background-color: $text-accent-color;
+    margin-bottom: 18px;
+    box-shadow: 2px 2px 2px 2px #ececec;
+    
+    @include screen('tablet') {
+      width: 290px;
+      margin-bottom: 20px;
+    }
+    @include screen('desktop') {
+    width: 390px;
+    }
+    @include screen('desktop-xl') {
+      width: 430px;
+  }
+  &:hover .system-education__list-icon {
+    fill: $text-accent-color;
+    }
+    &:hover .system-education__list-course  {
+      color:$text-accent-color;
+      }
+      &:hover .system-education__list-description {
+        color:$text-accent-color;
+      }
+      &:hover .system-education__list-course::after {
+        background-color:$text-accent-color;
+      }
+  &:hover {
+    background-color: $accent-color;
+    cursor: pointer;
+    }
+  }
+  &__list-course {
+    @include font-source-sans(13px, 600, 20px, 0.05rem);
+    width: 204px;
+    margin: 0 auto;
+    text-align: center;
+    color: $secondary-dark-color;
+    position: relative;
+    margin-bottom: 30px;
+    
+    
+    @include screen('desktop') {
+      @include font-source-sans(18px, 800, 29.17px, 0.05rem);
+      width: 304px;
+    }
+    @include screen('desktop-xl'){
+      width: 352px;
+      @include font-source-sans(21px, 800, 30px, 0.05rem);
+    }
+  }
+  &__list-description {
+      width: 240px;
+      margin: 0 auto;
+      text-align: center;
+      @include font-source-sans(13px, 400, 18px, 0.05rem);
+      color: $secondary-bright-color;
+      margin-bottom: 30px;
+    
+      @include screen('desktop') {
+        @include font-source-sans(15px, 400, 31px, 0.05rem);
+        width: 350px;
+      }
+      @include screen('desktop-xl'){
+        @include font-source-sans(19px, 400, 31px, 0.05rem);
+        width: 326px;
+        margin-bottom: 56px;
+      }
+  }
+  &__list-icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 30px; 
+    fill: $accent-color;
+  
+    @include screen('desktop'){
+      margin-top: 42px;
+  }
+  }
+  &__list-course::after {
+    content: "";
+    width: 26px;
+    height: 2px;
+    background-color: $accent-color;
+    position: absolute;
+    display: block;
+    left: 45%;
+    bottom: -16px;
+  }
+  }
+       
+
+  
+
+ 
+ 

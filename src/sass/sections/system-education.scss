@@ -1,9 +1,17 @@
 .system-education {
+  padding-top: 204px;
   margin: 0 auto;
   background-color: #f7f7f7;
   padding-bottom: 52px;
   @include screen('desktop') {
+    padding-top: 210px;
     padding-bottom: 100px;
+  }
+  @include screen('tablet') {
+    padding-top: 230px;
+  }
+  @include screen('desktop') {
+    padding-top: 160px;
   }
   @include screen('desktop-xl') {
     padding-bottom: 130px;
@@ -12,8 +20,6 @@
     @include font-source-sans(20px, 800, 33px, 0.05rem);
     color: $primary-dark-color;
     padding-bottom: 40px;
-    text-align: center;
-    padding-top: 50px;
 
     @include screen('tablet') {
       @include font-source-sans(26px, 800, 33px, 0.05rem);
@@ -147,5 +153,11 @@
     display: block;
     left: 45%;
     bottom: -16px;
+  }
+}
+
+h2.system-education__title-text {
+  @include screen('desktop') {
+    text-align: left;
   }
 }

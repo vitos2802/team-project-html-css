@@ -41,9 +41,10 @@
   position: relative;
 }
 
-.student-problems__section-title {
+h2.student-problems__section-title {
   max-width: 240px;
   color: $text-accent-color;
+  text-align: left;
 
   @include screen('tablet') {
     max-width: 465px;

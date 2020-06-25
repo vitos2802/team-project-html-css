@@ -48,7 +48,6 @@
 
     &-item {
       @include font-source-sans(15px, 600, 1.2, 0.05em);
-
       &:nth-child(1) {
         color: $primary-bright-color;
       }
@@ -247,6 +246,10 @@
 }
 
 .hero__additional {
+  @include screen('mobile') {
+    @include center-flex(ver);
+    flex-direction: column;
+  }
   @include screen('tablet') {
     display: flex;
     justify-content: space-between;
@@ -276,9 +279,10 @@
   }
 
   &-item {
+    width: 200px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     &-description {
       margin-left: 12px;
       @include font-source-sans(13px, 700, 1.2, 0.05em);

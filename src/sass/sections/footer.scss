@@ -1,0 +1,93 @@
+.footer {
+  background-color: $footer-text-color;
+}
+
+.footer-contacts {
+  position: relative;
+  @include screen('mobile') {
+    padding-top: 28px;
+    padding-bottom: 14px;
+    text-align: center;
+  }
+  @include screen('tablet') {
+    display: flex;
+    padding: 40px 0px 40px 0px;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.footer__logotype {
+  @include screen('tablet') {
+    position: absolute;
+    left: 0px;
+  }
+}
+
+.footer-contacts__address {
+  @include screen('mobile') {
+    margin-bottom: 20px;
+  }
+  @include screen('tablet') {
+    @include center-flex(all);
+  }
+}
+
+.footer-contacts__tel {
+  font-style: normal;
+  @include font-source-sans(18px, 600, 37.5px, 0.05em);
+  color: $secondary-dark-color;
+  @include center-flex(all);
+  @include screen('mobile') {
+    margin-bottom: 20px;
+  }
+  @include screen('tablet') {
+    padding-right: 30px;
+    border-right: 1px solid #e0e0e0;
+    font-size: 20px;
+  }
+  @include screen('desktop') {
+    font-size: 27.08px;
+  }
+  &::before {
+    content: '';
+    display: block;
+    background-image: url(../images/footer/tel.svg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    width: 26px;
+    height: 26px;
+    margin-right: 6px;
+    @include screen('desktop') {
+      margin-right: 12px;
+    }
+  }
+}
+
+.footer-contacts__insta {
+  @include screen('tablet') {
+    padding-left: 30px;
+  }
+}
+
+.footer-contacts__insta img {
+  margin: 0px auto;
+  width: 37px;
+  height: 37px;
+}
+
+.copyright {
+  background-color: $secondary-dark-color;
+}
+
+.copyright__text {
+  @include font-source-sans(11px, 500, 37.5px, 0.05em) color: $footer-text-color;
+  opacity: 0.42;
+  padding: 20px 0px;
+  @include screen('mobile') {
+    text-align: center;
+  }
+  @include screen('desktop') {
+    font-size: 14.58px;
+  }
+}

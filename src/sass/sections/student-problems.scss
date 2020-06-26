@@ -42,8 +42,12 @@
 }
 
 .student-problems__section-title {
-  max-width: 240px;
   color: $text-accent-color;
+
+  @include screen('mobile') {
+    max-width: 240px;
+    margin: 0 auto;
+  }
 
   @include screen('tablet') {
     max-width: 465px;

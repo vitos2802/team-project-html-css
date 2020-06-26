@@ -70,8 +70,6 @@
   }
 
   @include screen('desktop') {
-    display: flex;
-    flex-direction: column;
     margin-bottom: 56px;
   }
 }
@@ -81,6 +79,10 @@
   }
   &:not(:last-child) {
     margin-bottom: 20px;
+
+    @include screen('desktop') {
+      margin-bottom: 28px;
+    }
   }
 
   width: 280px;
@@ -98,7 +100,6 @@
     height: 70px;
     margin: 0px auto;
     @include font-source-sans(20.83px, 600, 37.5px, 0.05rem);
-    margin-bottom: 28px;
 
     &:required:valid {
       outline: 2px solid green;
@@ -109,5 +110,5 @@
   }
 }
 .contact-form__button {
-  margin: 0px auto;
+  margin: 0 auto;
 }

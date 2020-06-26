@@ -1,0 +1,25 @@
+@import 'normalize.scss';
+@import './helpers/fonts.scss';
+@import './helpers/variables.scss';
+@import './helpers/mixins.scss';
+@import './helpers/visually-hidden.scss';
+@import 'base.scss';
+
+@import './components/wrapper.scss';
+@import './components/container.scss';
+@import './components/logotype.scss';
+@import './components/button.scss';
+@import './components/section-title.scss';
+@import './components/card-counter.scss';
+
+@import './sections/header.scss';
+@import './sections/hero.scss';
+@import './sections/student-problems.scss';
+@import './sections/system-education.scss';
+@import './sections/our-program.scss';
+@import './sections/why-choose-us.scss';
+@import './sections/teacher.scss';
+@import './sections/we-guarantee.scss';
+@import './sections/contact-form.scss';
+@import './sections/reviews-slider.scss';
+@import './sections/footer.scss';

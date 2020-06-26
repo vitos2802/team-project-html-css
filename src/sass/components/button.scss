@@ -1,0 +1,28 @@
+.button {
+  @include font-source-sans(11px, 700, 1.2, 0.09em);
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  width: 250px;
+  height: 48px;
+  cursor: pointer;
+  color: $text-accent-color;
+  background-color: $accent-color;
+  transition: all 0.2s linear;
+
+  &:hover {
+    background-color: #ff2f00;
+  }
+
+  @include screen('desktop') {
+    width: 300px;
+    height: 68px;
+    @include font-source-sans(12px, 700, 1.2, 0.13em);
+  }
+
+  @include screen('desktop-xl') {
+    width: 350px;
+    height: 68px;
+    @include font-source-sans(14px, 700, 1.2, 0.13em);
+  }
+}

@@ -1,0 +1,103 @@
+.we-guarantee {
+  text-align: center;
+  padding: 30px 0 30px;
+}
+
+.section-title {
+  text-align: center;
+
+  @include screen('desktop') {
+    margin-bottom: 43px;
+  }
+}
+
+.list-wrapper {
+  position: relative;
+
+  @include screen('mobile') {
+    background-color: #f1f1f1;
+  }
+}
+
+.section-list {
+  padding: 26px 0 29px 36px;
+
+  @include screen('tablet') {
+    padding: 38px 54px 35px 100px;
+
+    background-color: #f1f1f1;
+  }
+
+  @include screen('desktop') {
+    padding: 38px 135px 35px 170px;
+
+    background-color: #f1f1f1;
+  }
+
+  &__item {
+    @include font-source-sans(11px, 500, 1.8, 0.05em);
+
+    @include screen('tablet') {
+      @include font-source-sans(11px, 600, 1.62, 0.05em);
+    }
+
+    @include screen('desktop') {
+      @include font-source-sans($size: 18px);
+    }
+
+    @include screen('desktop-xl') {
+      @include font-source-sans($size: 21px);
+    }
+
+    text-align: initial;
+    color: $primary-dark-color;
+    position: relative;
+
+    &-span {
+      color: $accent-color;
+      font-weight: 600;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+
+      @include screen('tablet') {
+        margin-bottom: 32px;
+      }
+    }
+
+    &::before {
+      display: block;
+      content: '';
+      background-image: url(../images/logotype__icon.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 13px;
+      height: 18px;
+      top: 0;
+      left: -31px;
+      position: absolute;
+      z-index: 1;
+
+      @include screen('desktop') {
+        width: 20px;
+        height: 27px;
+        top: -3px;
+        left: -34px;
+      }
+    }
+
+    &:not(:last-child)::after {
+      display: block;
+      content: '';
+      border-right: 1px dotted #bababa;
+      top: 10px;
+      left: -25px;
+      height: 140%;
+      position: absolute;
+      @include screen('tablet') {
+        height: 180%;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.container {
+  width: 280px;
+  margin: 0 auto;
+
+  @include screen('tablet') {
+    width: 690px;
+  }
+
+  @include screen('desktop') {
+    width: 1210px;
+  }
+
+  @include screen('desktop-xl') {
+    width: 1340px;
+  }
+}

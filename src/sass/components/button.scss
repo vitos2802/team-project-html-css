@@ -8,6 +8,11 @@
   cursor: pointer;
   color: $text-accent-color;
   background-color: $accent-color;
+  transition: all 0.2s linear;
+
+  &:hover {
+    background-color: #ff2f00;
+  }
 
   @include screen('desktop') {
     width: 350px;

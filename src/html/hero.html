@@ -2,15 +2,15 @@
   <div class="container">
     <div class="hero__wrap-content">
       <div class="hero__content">
-        <h2 class="hero__title">
+        <h1 class="hero__title">
           Комплексная <span class="hero__title-span1">подготовка к ВНО</span> по
           английскому <span class="hero__title-span2">языку</span>
-        </h2>
-        <ul class="hero__description">
-          <li class="hero__description-item">Просто не будет.</li>
-          <li class="hero__description-item">Но ты гарантировано наберешь</li>
-          <li class="hero__description-item">+25 баллов</li>
-        </ul>
+        </h1>
+        <p class="hero__description">
+          <span class="hero__description-item">Просто не будет.</span>
+          <span class="hero__description-item">Но ты гарантировано наберешь</span>
+          <span class="hero__description-item">+25 баллов</span>
+        </p>
 
         <button class="button hero__button">
           хочу на бесплатное занятие
@@ -18,6 +18,16 @@
       </div>
 
       <picture class="hero__picture">
+        <source
+          media="(min-width: 1680px)"
+          srcset="
+            ./images/header/pic-1680.png,
+            ./images/header/pic-1680@2x.png 2x
+          "
+          sizes="839px"
+          height="717"
+        />
+
         <source
           media="(min-width: 1280px)"
           srcset="

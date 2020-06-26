@@ -1,14 +1,27 @@
 .hero {
-  padding-bottom: 80px;
+  padding-bottom: 50px;
+  background-image: url(../images/header/background.png);
+  background-repeat: no-repeat;
+  background-size: 100% 64%;
+
 
   @include screen('tablet') {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 130px;
+    background-image: url(../images/header/background-768.png);
+    background-size: 100% 70%;
   }
 
   @include screen('desktop') {
-    padding-bottom: 217px;
+    padding-bottom: 86px;
+    background-image: url(../images/header/background-1280.png);
+    background-size: 100% 70%;
+  }
+
+  @include screen('desktop-xl') {
+    padding-bottom: 130px;
+    background-image: url(../images/header/background-1680.png);
+    background-size: 100% 70%;
   }
 
   &__title {
@@ -41,13 +54,20 @@
 
   &__description {
     margin-bottom: 39px;
+    @include font-source-sans(15px, 600, 1.2, 0.05em);
 
     @include screen('desktop') {
       margin-bottom: 70px;
+      @include font-source-sans($size: 18px);
+    }
+
+    @include screen('desktop-xl') {
+      @include font-source-sans($size: 21px);
     }
 
     &-item {
-      @include font-source-sans(15px, 600, 1.2, 0.05em);
+      display: block;
+
       &:nth-child(1) {
         color: $primary-bright-color;
       }
@@ -71,14 +91,8 @@
   }
 
   &__button {
-    transition: all 0.2s linear;
-
     @include screen('mobile') {
       margin: 0 auto;
-    }
-
-    &:hover {
-      background-color: #ff2f00;
     }
   }
 }
@@ -91,11 +105,31 @@
     justify-content: space-between;
     margin-bottom: 128px;
   }
+
+  @include screen('desktop-xl') {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 167px;
+  }
 }
 
 .hero__content {
   @include screen('mobile') {
     margin-bottom: 35px;
+  }
+
+  @include screen('desktop-xl') {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.hero__picture {
+  @include screen('desktop-xl') {
+    position: absolute;
+    top: 0;
+    right: -10%;
   }
 }
 
@@ -103,146 +137,6 @@
   @include screen('mobile') {
     margin: 0 auto;
   }
-}
-
-.burger {
-  background-color: transparent;
-  position: relative;
-
-  @include screen('desktop') {
-    display: none;
-  }
-}
-
-.submenu {
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.3s linear;
-  position: fixed;
-  background-color: rgba(24, 25, 29, 0.9);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  padding-top: 116px;
-  z-index: 1;
-
-  @include screen('tablet') {
-    width: 100%;
-    height: 100%;
-  }
-
-  &-item {
-    text-align: center;
-
-    &:nth-child(-n + 4) {
-      margin-bottom: 25px;
-    }
-
-    &:nth-child(5) {
-      margin-bottom: 56px;
-    }
-
-    &-button {
-      width: 250px;
-      height: 48px;
-      margin: 0 auto;
-      border: 2px solid $accent-color;
-      cursor: pointer;
-      padding-top: 10px;
-
-      transition: all 0.2s linear;
-
-      &-link {
-        color: $accent-color;
-      }
-
-      &:hover {
-        border: 2px solid $text-accent-color;
-      }
-
-      @include screen('tablet') {
-        display: none;
-      }
-    }
-
-    &-link {
-      color: $text-accent-color;
-      transition: all 0.1s linear;
-
-      &:hover {
-        color: $accent-color;
-      }
-    }
-  }
-}
-
-.burger {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 24px;
-  height: 24px;
-  background-color: transparent;
-
-  @include screen('desktop') {
-    display: none;
-  }
-}
-
-.burger__line {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: $primary-dark-color;
-  transition: 0.3s linear;
-
-  &::before {
-    @include pseudo;
-    width: 100%;
-    height: 2px;
-    background-color: $primary-dark-color;
-    top: 5px;
-  }
-
-  &::after {
-    @include pseudo;
-    width: 100%;
-    height: 2px;
-    background-color: $primary-dark-color;
-    bottom: 5px;
-  }
-}
-
-.open-close {
-  .burger__line {
-    transform: rotate(45deg);
-    z-index: 2;
-    background-color: $text-accent-color;
-  }
-
-  .burger__line::before {
-    top: 0;
-    transform: rotate(0);
-    background-color: $text-accent-color;
-  }
-
-  .burger__line::after {
-    bottom: 0;
-    transform: rotate(90deg);
-    background-color: $text-accent-color;
-  }
-}
-
-.show {
-  visibility: visible;
-  opacity: 1;
-}
-
-.visible {
-  z-index: 2;
-  color: $text-accent-color;
 }
 
 .hero__additional {
@@ -283,6 +177,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
+    @include screen('desktop') {
+      width: max-content;
+    }
     &-description {
       margin-left: 12px;
       @include font-source-sans(13px, 700, 1.2, 0.05em);

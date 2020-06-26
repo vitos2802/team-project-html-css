@@ -38,7 +38,15 @@
     @include font-source-sans(11px, 500, 1.8, 0.05em);
 
     @include screen('tablet') {
-      @include font-source-sans(11px, 500, 1.62, 0.05em);
+      @include font-source-sans(11px, 600, 1.62, 0.05em);
+    }
+
+    @include screen('desktop') {
+      @include font-source-sans($size: 18px);
+    }
+
+    @include screen('desktop-xl') {
+      @include font-source-sans($size: 21px);
     }
 
     text-align: initial;
@@ -75,7 +83,7 @@
         width: 20px;
         height: 27px;
         top: -3px;
-        left: -33px;
+        left: -34px;
       }
     }
 

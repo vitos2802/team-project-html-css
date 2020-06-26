@@ -15,8 +15,14 @@
   }
 
   @include screen('desktop') {
+    width: 300px;
+    height: 68px;
+    @include font-source-sans(12px, 700, 1.2, 0.13em);
+  }
+
+  @include screen('desktop-xl') {
     width: 350px;
     height: 68px;
-    @include font-source-sans(16px, 700, 1.2, 0.13em);
+    @include font-source-sans(14px, 700, 1.2, 0.13em);
   }
 }

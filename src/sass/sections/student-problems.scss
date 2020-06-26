@@ -41,8 +41,9 @@
   position: relative;
 }
 
-.student-problems__section-title {
+h2.student-problems__section-title {
   color: $text-accent-color;
+  text-align: left;
 
   @include screen('mobile') {
     max-width: 240px;

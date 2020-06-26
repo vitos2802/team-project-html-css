@@ -1,6 +1,6 @@
 .our-program {
   position: relative;
-  padding-top: 24px;
+  padding-top: 46px;
   padding-bottom: 430px;
   text-align: center;
   background-color: #111517;
@@ -14,7 +14,7 @@
   }
 
   @include screen('tablet') {
-    padding-top: 70px;
+    padding-top: 52px;
     text-align: left;
     background-position: right 70%;
     background-image: url(../images/section-our-program/tablet-bg.png);
@@ -52,12 +52,12 @@
     @include screen('desktop') {
       @include pseudo;
       background-color: #546264;
-      top: 176px;
+      top: 218px;
       width: 100vw;
       height: 2px;
     }
     @include screen('desktop-xl') {
-      top: 278px;
+      top: 322px;
       height: 4px;
     }
   }

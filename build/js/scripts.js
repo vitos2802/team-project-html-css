@@ -1,1 +1,0 @@
-"use strict";var burger=document.querySelector(".burger"),submenu=document.querySelector(".navigation"),logotype=document.querySelector(".header__logotype");burger.addEventListener("click",function(e){e.preventDefault(),burger.classList.toggle("open-close"),submenu.classList.toggle("show"),logotype.classList.toggle("visible")});
